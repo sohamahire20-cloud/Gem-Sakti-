@@ -138,6 +138,14 @@
     top: 140px !important;
     bottom: auto !important;
   }
+  /* widget's minimized state — pin to top-right too (mobile bottom-bar variant) */
+  #omni-minimized-pill {
+    left: auto !important;
+    right: 16px !important;
+    top: 84px !important;
+    bottom: auto !important;
+    width: auto !important;
+  }
   /* hidden on admin console & demo checkout (body.gs-no-agent set by route) */
   body.gs-no-agent #chat-helper-button-container,
   body.gs-no-agent #chat-iframe-container,
