@@ -125,6 +125,27 @@
   .lenis.lenis-stopped {
     overflow: hidden;
   }
+  /* ---- OmniDimension agent placement: top-right corner ---- */
+  #chat-helper-button-container {
+    left: auto !important;
+    right: 16px !important;
+    top: 84px !important;
+    bottom: auto !important;
+  }
+  #chat-iframe-container {
+    left: auto !important;
+    right: 16px !important;
+    top: 140px !important;
+    bottom: auto !important;
+  }
+  /* hidden on admin console & demo checkout (body.gs-no-agent set by route) */
+  body.gs-no-agent #chat-helper-button-container,
+  body.gs-no-agent #chat-iframe-container,
+  body.gs-no-agent [id^="omni"],
+  body.gs-no-agent .omnidim-widget,
+  body.gs-no-agent iframe[src*="omnidim"] {
+    display: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

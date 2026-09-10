@@ -15,6 +15,7 @@ import QuickView from "./components/QuickView";
 import Footer from "./components/Footer";
 import FloatingContactActions from "./components/FloatingContactActions";
 import MobileBottomNav from "./components/MobileBottomNav";
+import OmniAgent from "./components/OmniAgent";
 
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
@@ -128,6 +129,7 @@ function Shell() {
       <Footer />
       <div className="h-16 bg-ebony lg:hidden" />
       <MobileBottomNav />
+      <OmniAgent />
       <MobileMenu />
       <SearchModal />
       <CartDrawer />
