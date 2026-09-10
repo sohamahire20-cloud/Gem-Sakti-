@@ -1,0 +1,199 @@
+{
+  "project_name": "GemSakti E-Commerce Frontend Demo",
+  "brand_positioning": "ENERGY • FAITH • PROSPERITY",
+  "design_language": "LUXURY JEWELLERY + MODERN INDIAN SPIRITUALITY + EDITORIAL E-COMMERCE + CALM DIGITAL EXPERIENCE",
+  "theme_strategy": {
+    "default_mode": "dark",
+    "primary_dark_bg": "#171614",
+    "secondary_dark_surface": "#22201C",
+    "card_dark_surface": "#1E1C19",
+    "primary_light_bg": "#F5F0E7",
+    "secondary_light_surface": "#EAE3D6",
+    "text_dark_mode": "#F5F0E7",
+    "text_light_mode": "#171614",
+    "text_muted_dark": "#A8A093",
+    "text_muted_light": "#665E52",
+    "accent_gold": "#B99A5B",
+    "accent_gold_hover": "#D4B472",
+    "border_gold_subtle": "rgba(185, 154, 91, 0.2)",
+    "secondary_palette": {
+      "ebony_black": "#0C0B0A",
+      "warm_brown": "#3E2D20",
+      "stone_beige": "#E6DFD3",
+      "smoky_grey": "#2A2724",
+      "tiger_eye": "#C88132",
+      "green_jade": "#3A5A40",
+      "amethyst": "#5B4372",
+      "red_garnet": "#7D2323"
+    },
+    "rules": [
+      "Use Muted Antique Gold (#B99A5B) strictly as an accent for buttons, borders, highlights, and badges—never as full background blocks.",
+      "Avoid excessive gradients and neon colors. Maintain rich, tactile textures (subtle noise/grain, matte wood finish, soft gold sheen).",
+      "Ensure all text meets APCA/WCAG AA contrast against background surfaces."
+    ]
+  },
+  "typography": {
+    "editorial_headings": {
+      "font_family": "'Cormorant Garamond', 'Playfair Display', 'DM Serif Display', serif",
+      "usage": "Major page headlines, editorial feature banners, section titles, product names on PDP",
+      "rules": "H1 max size: text-4xl sm:text-5xl lg:text-6xl with tracking-tight. High line height for body paragraphs."
+    },
+    "body_and_ui": {
+      "font_family": "'Manrope', 'DM Sans', 'Inter', sans-serif",
+      "usage": "Navigation, filters, prices, button text, badges, accordions, forms, utility bars",
+      "rules": "Clean modern sans-serif with subtle letter spacing on uppercase badges (tracking-[0.2em])."
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-4 sm:px-8 lg:px-16 py-12 lg:py-24",
+    "card_padding": "p-6 sm:p-8",
+    "grid_modes": {
+      "editorial_hero": "grid grid-cols-1 lg:grid-cols-12 gap-8 items-center",
+      "product_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8",
+      "intention_bento": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"
+    }
+  },
+  "hero_scroll_animation_spec": {
+    "type": "Scroll-Driven Frame Sequence / Canvas Renderer",
+    "concept": "Vertical 9:16 high-definition sequence of a polished Karungali ebony bead bracelet with a glowing golden crystal emerging slowly from ambient darkness as the user scrolls.",
+    "overlay_text": [
+      "GEMSAKTI • SANCTUARY OF ENERGY",
+      "WEAR YOUR ENERGY.",
+      "Sacred Karungali Wood, Vedic Energized Rudraksha, and Dhan Yog Prosperity Crystals for Faith and Success."
+    ],
+    "ctas": [
+      {
+        "text": "Explore Intention Malas",
+        "action": "navigate_collections",
+        "data_testid": "hero-cta-explore"
+      },
+      {
+        "text": "Find Your Energy Quiz",
+        "action": "open_quiz",
+        "data_testid": "hero-cta-quiz"
+      }
+    ]
+  },
+  "key_features_and_components": [
+    {
+      "component_name": "HeaderNav",
+      "description": "Sticky top bar with glassmorphic background (#171614/85 + backdrop-blur-xl), brand logo in Serif, Navigation links (Shop by Category, Intentions, Karungali, Rudraksha, Dhan Yog, Quiz, Journal, About), Search Trigger, Wishlist Counter, and Cart Drawer Trigger with item count badge.",
+      "data_testids": [
+        "nav-logo",
+        "nav-search-button",
+        "nav-cart-button",
+        "nav-quiz-link",
+        "nav-collection-link"
+      ]
+    },
+    {
+      "component_name": "TrustStrip",
+      "description": "Editorial trust indicators: 100% Lab Certified Authentic Woods & Gemstones • Vedic Priest Energized at Sacred Temples • 7-Day Easy Returns • Free Insured Pan-India Express Delivery.",
+      "data_testids": ["trust-strip-container"]
+    },
+    {
+      "component_name": "ShopByIntention",
+      "description": "5 Core Intentions (Wealth & Prosperity, Protection & Grounding, Health & Peace, Focus & Career, Love & Relationships) represented with natural stone color accents and custom iconography.",
+      "data_testids": ["intention-card-wealth", "intention-card-protection"]
+    },
+    {
+      "component_name": "EnergyQuizModal",
+      "description": "3-step interactive discovery quiz: Step 1: Core Goal/Intention -> Step 2: Zodiac / Element -> Step 3: Preferred Daily Wear Style (Bracelet/Mala/Pendant). Returns 3 tailored product recommendations with 'Add All to Cart' option.",
+      "data_testids": [
+        "quiz-modal-container",
+        "quiz-step-next",
+        "quiz-result-add-cart"
+      ]
+    },
+    {
+      "component_name": "ProductGridWithFilters",
+      "description": "Filtering by Material (Karungali Wood, Rudraksha, Crystal, Gemstone), Intention, Price Range, Gender, and Sort by (Bestseller, Price Low to High, New Arrival). Product cards feature image hover flip, quick add to cart, energization status badge, and authentic star rating.",
+      "data_testids": [
+        "product-card",
+        "product-quick-add",
+        "filter-category",
+        "sort-dropdown"
+      ]
+    },
+    {
+      "component_name": "ProductDetailPagePDP",
+      "description": "High-craft PDP with thumbnail gallery + zoom, sticky right purchase panel with size selection (6mm, 8mm, 10mm beads / wrist size), Vedic energization customization option (Add Name + Gotra for blessing), Accordions for 'Sacred Energy & Benefits', 'Materials & Lab Certification', 'Vedic Ritual Process', 'Care & Maintenance'. Sticky bottom Add to Cart bar on mobile.",
+      "data_testids": [
+        "pdp-main-image",
+        "pdp-add-to-cart-btn",
+        "pdp-energization-toggle",
+        "pdp-accordion-benefits"
+      ]
+    },
+    {
+      "component_name": "CartDrawer",
+      "description": "Slide-over drawer showing selected items, quantity controls, free shipping progress bar, Vedic energization gift checkbox, subtotal, and CTA button to proceed to Demo Checkout.",
+      "data_testids": [
+        "cart-drawer-container",
+        "cart-item-increment",
+        "cart-item-decrement",
+        "cart-checkout-button"
+      ]
+    },
+    {
+      "component_name": "SearchModal",
+      "description": "Full-screen overlay search with instant autocomplete, recent search tags ('Dhan Yog Bracelet', 'Original Karungali Mala', '5 Mukhi Rudraksha'), and live results grid.",
+      "data_testids": ["search-input", "search-result-item"]
+    },
+    {
+      "component_name": "GiftingAndBundles",
+      "description": "Curated sacred gift sets with premium velvet box packaging, personalized blessing card message, and bundle discount badges.",
+      "data_testids": ["gift-bundle-card", "add-bundle-to-cart"]
+    },
+    {
+      "component_name": "DemoCheckout",
+      "description": "Realistic 3-step checkout form (Contact Details -> Shipping Address -> Order Review) concluding with a prominent notification banner: 'DEMO CHECKOUT / No payment was processed. Thank you for exploring GemSakti.'",
+      "data_testids": [
+        "checkout-form-submit",
+        "checkout-demo-disclaimer-banner"
+      ]
+    },
+    {
+      "component_name": "MobileBottomNav",
+      "description": "Fixed bottom navigation for mobile viewports (Home, Shop, Quiz, Cart, Account) for effortless touch interactions.",
+      "data_testids": ["mobile-nav-shop", "mobile-nav-cart"]
+    }
+  ],
+  "image_urls": {
+    "hero_and_featured": [
+      {
+        "category": "Karungali Ebony Bead Bracelet",
+        "url": "https://images.unsplash.com/photo-1534976618208-4833d5b57d08?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxibGFjayUyMG9ic2lkaWFuJTIwYmVhZGVkJTIwYnJhY2VsZXQlMjBnb2xkJTIwc3Bpcml0dWFsJTIwbHV4dXJ5JTIwamV3ZWxsZXJ5fGVufDB8fHx8MTc4OTA0MDYwNXww&ixlib=rb-4.1.0&q=85",
+        "description": "Person wearing black ebony/obsidian bead bracelet with gold accents"
+      },
+      {
+        "category": "Dhan Yog Gold Gemstone Bracelet",
+        "url": "https://images.unsplash.com/photo-1638617501607-5dfb8b079ebf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxnb2xkJTIwZ2Vtc3RvbmUlMjBicmFjZWxldCUyMGx1eHVyeSUyMGluZGlhbiUyMGpld2VsbGVyeSUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODkwNDA2MTJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "High end gold and crystal bracelet on dark background"
+      },
+      {
+        "category": "Rudraksha Mala Beads",
+        "url": "https://images.unsplash.com/photo-1650809652935-2e5002ba40bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHx3b29kZW4lMjBtYWxhJTIwYmVhZHMlMjBydWRyYWtzaGElMjBzcGlyaXR1YWwlMjBsdXh1cnklMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODkwNDA2MTJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Sacred Rudraksha wooden mala beads with warm lighting"
+      },
+      {
+        "category": "Wood Mala Tassel Necklace",
+        "url": "https://images.unsplash.com/photo-1622993361118-b6365d859ab6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBtYWxhJTIwYmVhZHMlMjBydWRyYWtzaGElMjBzcGlyaXR1YWwlMjBsdXh1cnklMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODkwNDA2MTJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Handcrafted sacred mala with turquoise bead accent"
+      },
+      {
+        "category": "Luxury Model Wearing Spiritual Jewellery",
+        "url": "https://images.unsplash.com/photo-1716504628084-97224213ca6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwyfHxnb2xkJTIwZ2Vtc3RvbmUlMjBicmFjZWxldCUyMGx1eHVyeSUyMGluZGlhbiUyMGpld2VsbGVyeSUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODkwNDA2MTJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Editorial portrait of Indian model wearing fine gold bracelet"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Always set data-testid on every interactive button, filter, card, modal, input, and checkout step.",
+    "Use Framer Motion for smooth state reveals, cart drawer transitions, and quiz step slide animations.",
+    "Use 'sonner' for toast alerts when adding items to cart, copying product links, or completing quiz steps.",
+    "The demo checkout MUST conclude with a clear banner/dialog stating: 'DEMO CHECKOUT / No payment was processed.'",
+    "Maintain state locally using React Context/State for cart, search, quiz answers, and filter selections so the prototype feels 100% interactive and functional.",
+    "Include realistic Indian Rupee formatting (e.g. ₹2,499, ₹4,999) with strike-through MRPs for perceived savings."
+  ]
+}

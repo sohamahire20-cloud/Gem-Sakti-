@@ -1,0 +1,56 @@
+/** @type {import('tailwind').Config} */
+module.exports = {
+  blocklist: ["overline"],
+  darkMode: ["class"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  theme: {
+    extend: {
+      colors: {
+        ink: "#171614",
+        ink2: "#22201C",
+        ink3: "#1E1C19",
+        ebony: "#0C0B0A",
+        smoke: "#2A2724",
+        ivory: "#F5F0E7",
+        ivory2: "#EAE3D6",
+        stone: "#E6DFD3",
+        gold: "#B99A5B",
+        gold2: "#D4B472",
+        brownd: "#3E2D20",
+        mutedark: "#A8A093",
+        mutelight: "#665E52",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+        popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+        primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+        secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+        muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+        accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+        destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', '"Playfair Display"', "Georgia", "serif"],
+        sans: ['Manrope', '"DM Sans"', "system-ui", "sans-serif"],
+      },
+      letterSpacing: {
+        widest2: "0.28em",
+        wider2: "0.18em",
+      },
+      keyframes: {
+        marquee: { from: { transform: "translateX(0)" }, to: { transform: "translateX(-50%)" } },
+        "fade-in": { from: { opacity: "0" }, to: { opacity: "1" } },
+        "slow-zoom": { from: { transform: "scale(1)" }, to: { transform: "scale(1.06)" } },
+      },
+      animation: {
+        marquee: "marquee 46s linear infinite",
+        "fade-in": "fade-in 0.6s ease-out both",
+        "slow-zoom": "slow-zoom 14s ease-out both",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+};
